@@ -6,6 +6,7 @@ const { exec } = require('child_process')
 const dataConfig = require('./graphql.config')
 const thegraphConfig = require('./graphql_thegraph.config')
 
+console.log(process.env.THE_GRAPH_SCHEMA_ENDPOINT, 'local url')
 function fetchSchema(url, outputFile) {
   exec(
     `get-graphql-schema --h Origin=https://app.uniswap.org ${url} | tee ${outputFile}.temp`,

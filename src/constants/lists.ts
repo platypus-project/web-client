@@ -21,7 +21,7 @@ export const PICADILLY_LIST =
 export const UNSUPPORTED_LIST_URLS: string[] = []
 
 // default lists to be 'active' aka searched across
-export const DEFAULT_ACTIVE_LIST_URLS: string[] = []
+export const DEFAULT_ACTIVE_LIST_URLS: string[] = [PICADILLY_LIST, UNI_LIST]
 export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
   // UNI_EXTENDED_LIST,
   // COMPOUND_LIST,
@@ -34,7 +34,6 @@ export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
   // SET_LIST,
   OPTIMISM_LIST,
   // CELO_LIST,
-  PICADILLY_LIST,
   ...UNSUPPORTED_LIST_URLS,
 ]
 

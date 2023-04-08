@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount as mockCurrencyAmount, Token as mockToken } from '@uniswap/sdk-core'
-import { DAI, USDC_MAINNET, WBTC } from 'constants/tokens'
+import { DAI, USDC_MAINNET } from 'constants/tokens'
 import * as mockJSBI from 'jsbi'
 import { render } from 'test-utils'
 
@@ -12,7 +12,6 @@ const noOp = function () {
 const mockCurrencyAmt = {
   [DAI.address]: mockCurrencyAmount.fromRawAmount(DAI, mockJSBI.default.BigInt(100)),
   [USDC_MAINNET.address]: mockCurrencyAmount.fromRawAmount(USDC_MAINNET, mockJSBI.default.BigInt(10)),
-  [WBTC.address]: mockCurrencyAmount.fromRawAmount(WBTC, mockJSBI.default.BigInt(1)),
 }
 
 jest.mock(
@@ -63,7 +62,7 @@ it('renders currency rows correctly when currencies list is non-empty', () => {
   const { asFragment } = render(
     <CurrencyList
       height={10}
-      currencies={[DAI, USDC_MAINNET, WBTC]}
+      currencies={[DAI, USDC_MAINNET]}
       otherListTokens={[]}
       selectedCurrency={null}
       onCurrencySelect={noOp}
