@@ -34,6 +34,10 @@ export function usePositionTokenURI(tokenId: TokenId | undefined): UsePositionTo
     () => [tokenId instanceof BigNumber ? tokenId.toHexString() : tokenId?.toString(16)],
     [tokenId]
   )
+  if (tokenId) {
+    const test = contract?.tokenURI(15)
+    console.log(test, 'token uri 15')
+  }
   const { result, error, loading, valid } = useSingleCallResult(contract, 'tokenURI', inputs, {
     ...NEVER_RELOAD,
     gasRequired: 3_000_000,

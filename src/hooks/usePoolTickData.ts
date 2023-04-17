@@ -211,13 +211,11 @@ export function usePoolActiveLiquidity(
   data: TickProcessed[] | undefined
 } {
   const pool = usePool(currencyA, currencyB, feeAmount)
-  console.log(pool, 'pool')
 
   // Find nearest valid tick for pool in case tick is not initialized.
   const activeTick = useMemo(() => getActiveTick(pool[1]?.tickCurrent, feeAmount), [pool, feeAmount])
 
   const { isLoading, error, ticks } = useAllV3Ticks(currencyA, currencyB, feeAmount)
-  console.log(ticks, 'ticks')
 
   return useMemo(() => {
     if (

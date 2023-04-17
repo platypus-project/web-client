@@ -100,7 +100,6 @@ export default function LiquidityChartRangeInput({
     currencyB,
     feeAmount,
   })
-  console.log('formattedData', formattedData)
 
   const onBrushDomainChangeEnded = useCallback(
     (domain: [number, number], mode: string | undefined) => {
