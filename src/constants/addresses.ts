@@ -71,7 +71,8 @@ export const QUOTER_ADDRESSES: AddressMap = {
 }
 
 export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap = {
-  [SupportedChainId.PICADILLY]: '0x97c08474E4e6F5448AE4a6042Ca63Eb79f22236d',
+  [SupportedChainId.PICADILLY]: '0x98a1af57F0780180e046d9E10E9Ba6cbC2c2b0bE',
+  // [SupportedChainId.PICADILLY]: '0x97c08474E4e6F5448AE4a6042Ca63Eb79f22236d',
 }
 
 export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
