@@ -1,9 +1,11 @@
 import { Rewards } from 'nft/types/airdrop'
 
+// eslint-disable-next-line
 interface CollectionrRewardsResponse {
   data: Array<Rewards>
 }
 
+// eslint-disable-next-line
 export const CollectionRewardsFetcher = async (address: string): Promise<CollectionrRewardsResponse> => {
   const url = `${process.env.REACT_APP_TEMP_API_URL}/nft/rewards/${address}?category=GENIE_UNISWAP_USDC_AIRDROP`
 

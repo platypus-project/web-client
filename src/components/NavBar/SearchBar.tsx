@@ -40,6 +40,7 @@ const KeyShortCut = styled.div`
   backdrop-filter: blur(60px);
 `
 
+// eslint-disable-next-line
 export const SearchBar = () => {
   const [isOpen, toggleOpen] = useReducer((state: boolean) => !state, false)
   const [searchValue, setSearchValue] = useState('')
