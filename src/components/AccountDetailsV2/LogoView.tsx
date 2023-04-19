@@ -34,6 +34,7 @@ interface CurrencyPair {
   currencyId1: string | undefined
 }
 
+// eslint-disable-next-line
 const getCurrency = ({ info, chainId }: { info: TransactionInfo; chainId: number | undefined }): CurrencyPair => {
   switch (info.type) {
     case TransactionType.ADD_LIQUIDITY_V3_POOL:

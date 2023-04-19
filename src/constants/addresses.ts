@@ -3,8 +3,6 @@ import { SupportedChainId } from './chains'
 
 type AddressMap = { [chainId: number]: string }
 
-const testAddr = '0x921262fe27047cc14770bD8935abe67224662AA7'
-
 export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x921262fe27047cc14770bD8935abe67224662AA7')
 
 // export const UNISWAP_NFT_AIRDROP_CLAIM_ADDRESS = '0x8B799381ac40b838BBA4131ffB26197C432AFe78'

@@ -1,6 +1,5 @@
 import { Trace, user } from '@uniswap/analytics'
 import { CustomUserProperties, getBrowser, InterfacePageName } from '@uniswap/analytics-events'
-import { useWeb3React } from '@web3-react/core'
 import Loader from 'components/Loader'
 import { MenuDropdown } from 'components/NavBar/MenuDropdown'
 import TopLevelModals from 'components/TopLevelModals'
@@ -183,7 +182,7 @@ export default function App() {
 
   const isHeaderTransparent = !scrolledState
 
-  const { account } = useWeb3React()
+  // const { account } = useWeb3React()
   // const statsigUser: StatsigUser = useMemo(
   //   () => ({
   //     userID: getDeviceId(),

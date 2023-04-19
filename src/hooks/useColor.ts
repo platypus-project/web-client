@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 import { WrappedTokenInfo } from 'state/lists/wrappedTokenInfo'
 import { hex } from 'wcag-contrast'
 
+// eslint-disable-next-line
 function URIForEthToken(address: string) {
   return `https://raw.githubusercontent.com/project-paltypus/token-list/main/assets/ethereum-logo.png`
 }

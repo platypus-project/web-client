@@ -118,14 +118,17 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
   ),
 }
 
+// eslint-disable-next-line
 export function isCelo(chainId: number): boolean {
   return false
 }
 
+// eslint-disable-next-line
 function getCeloNativeCurrency(chainId: number) {
   throw new Error('Not celo')
 }
 
+// eslint-disable-next-line
 function isMatic(chainId: number): boolean {
   return false
 }

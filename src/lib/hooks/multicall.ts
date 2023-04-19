@@ -26,9 +26,6 @@ export function useSingleContractMultipleData(
   ...args: SkipFirstTwoParams<typeof multicall.hooks.useSingleContractMultipleData>
 ) {
   const { chainId, latestBlock } = useCallContext()
-  if (args[1] === 'getEthBalance' && args[2].length) {
-    const a = 1
-  }
   return multicall.hooks.useSingleContractMultipleData(chainId, latestBlock, ...args)
 }
 

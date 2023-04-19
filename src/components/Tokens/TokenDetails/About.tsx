@@ -79,6 +79,7 @@ export function AboutSection({ address, chainId, description, homepageUrl, twitt
 
   const tokenDescription = shouldTruncate && isDescriptionTruncated ? truncateDescription(description) : description
 
+  // eslint-disable-next-line
   const baseExplorerUrl = getChainInfo(chainId)!.explorer
 
   return (

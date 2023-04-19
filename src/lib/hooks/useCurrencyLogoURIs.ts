@@ -29,7 +29,7 @@ export function getNativeLogoURI(chainId: SupportedChainId = SupportedChainId.MA
 }
 
 function getTokenLogoURI(address: string, chainId: SupportedChainId = SupportedChainId.MAINNET): string | void {
-  const networkName = chainIdToNetworkName(chainId)
+  // const networkName = chainIdToNetworkName(chainId)
   const networksWithUrls = [SupportedChainId.MAINNET, SupportedChainId.OPTIMISM]
   if (networksWithUrls.includes(chainId)) {
     return `https://raw.githubusercontent.com/project-paltypus/token-list/main/assets/ethereum-logo.png`
