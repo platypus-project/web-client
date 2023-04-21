@@ -10,8 +10,6 @@ WORKDIR /home/node/app
 
 COPY --chown=node . .
 
-ENV GENERATE_SOURCEMAP=false
-
 # Building the production-ready application code - alias to 'nest build'
 RUN yarn install --legacy-peer-dep
 
