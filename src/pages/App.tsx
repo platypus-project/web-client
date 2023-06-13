@@ -1,11 +1,9 @@
 import { Trace, user } from '@uniswap/analytics'
 import { CustomUserProperties, getBrowser, InterfacePageName } from '@uniswap/analytics-events'
 import Loader from 'components/Loader'
-import { MenuDropdown } from 'components/NavBar/MenuDropdown'
 import TopLevelModals from 'components/TopLevelModals'
 import { useFeatureFlagsIsLoaded } from 'featureFlags'
 import ApeModeQueryParamReader from 'hooks/useApeModeQueryParamReader'
-import { Box } from 'nft/components/Box'
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useIsDarkMode } from 'state/user/hooks'
@@ -305,9 +303,6 @@ export default function App() {
         </BodyWrapper>
         <MobileBottomBar>
           <PageTabs />
-          <Box marginY="4">
-            <MenuDropdown />
-          </Box>
         </MobileBottomBar>
       </Trace>
     </ErrorBoundary>

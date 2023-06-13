@@ -177,7 +177,7 @@ const ActionsContainer = styled.span`
 `
 
 const LandingSwapContainer = styled.div`
-  height: ${({ theme }) => `calc(100vh - ${theme.mobileBottomBarHeight}px)`};
+  height: ${({ theme }) => `calc(100vh - ${theme.navHeight + theme.mobileBottomBarHeight}px)`};
   width: 100%;
   display: flex;
   flex-direction: column;
