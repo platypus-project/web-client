@@ -216,7 +216,6 @@ export function usePoolActiveLiquidity(
   const activeTick = useMemo(() => getActiveTick(pool[1]?.tickCurrent, feeAmount), [pool, feeAmount])
 
   const { isLoading, error, ticks } = useAllV3Ticks(currencyA, currencyB, feeAmount)
-  console.log(ticks, 'ticks')
 
   return useMemo(() => {
     if (

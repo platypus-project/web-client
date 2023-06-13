@@ -390,10 +390,6 @@ msgstr "Verander"
 msgid "Check network status"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "Kyk na ons v3 LP-deurleidings- en migrasiegidse."
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
@@ -836,10 +832,6 @@ msgstr ""
 msgid "Explore NFTs"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr ""
-
 #: src/components/Tokens/TokenDetails/InvalidTokenDetails.tsx
 msgid "Explore tokens"
 msgstr ""
@@ -1052,10 +1044,6 @@ msgstr ""
 #: src/pages/Pool/index.tsx
 msgid "Learn"
 msgstr "Leer"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Learn about providing liquidity"
-msgstr ""
 
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/PrivacyPolicy/index.tsx
@@ -2077,10 +2065,6 @@ msgstr ""
 #: src/components/NavBar/index.tsx
 msgid "Tokens"
 msgstr "Tekens"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Top pools"
-msgstr "Top poele"
 
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"

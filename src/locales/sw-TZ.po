@@ -390,10 +390,6 @@ msgstr "Badilisha"
 msgid "Check network status"
 msgstr "Angalia hali ya mtandao"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "Angalia mwongozo wetu wa v3 LP na mwongozo wa uhamiaji."
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
@@ -836,10 +832,6 @@ msgstr ""
 msgid "Explore NFTs"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr ""
-
 #: src/components/Tokens/TokenDetails/InvalidTokenDetails.tsx
 msgid "Explore tokens"
 msgstr ""
@@ -1052,10 +1044,6 @@ msgstr ""
 #: src/pages/Pool/index.tsx
 msgid "Learn"
 msgstr "Jifunze"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Learn about providing liquidity"
-msgstr "Jifunze juu ya kutoa ukwasi"
 
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/PrivacyPolicy/index.tsx
@@ -2077,10 +2065,6 @@ msgstr ""
 #: src/components/NavBar/index.tsx
 msgid "Tokens"
 msgstr "Ishara"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Top pools"
-msgstr "Mabwawa ya juu"
 
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"

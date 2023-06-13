@@ -7,9 +7,9 @@ const CHAIN_SUBGRAPH_URL: Record<number, string> = {
   [SupportedChainId.MAINNET]: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
 
   [SupportedChainId.OPTIMISM]: 'https://api.thegraph.com/subgraphs/name/ianlapham/optimism-post-regenesis',
-  [SupportedChainId.PICADILLY]: 'http://137.184.245.139:8000/subgraphs/name/uniswapv3',
+  [SupportedChainId.PICADILLY]:
+    process.env.THE_GRAPH_SCHEMA_ENDPOINT || 'https://137.184.245.139:8000/subgraphs/name/uniswapv3',
 }
-
 const httpLink = new HttpLink({ uri: CHAIN_SUBGRAPH_URL[SupportedChainId.MAINNET] })
 
 // This middleware will allow us to dynamically update the uri for the requests based off chainId

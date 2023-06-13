@@ -390,10 +390,6 @@ msgstr "Changer"
 msgid "Check network status"
 msgstr "Vérifier l'état du réseau"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "Consultez nos guides d'utilisation et de migration pour la v3 LP."
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
@@ -836,10 +832,6 @@ msgstr "Explorer"
 msgid "Explore NFTs"
 msgstr "Explorer les NFTs"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr ""
-
 #: src/components/Tokens/TokenDetails/InvalidTokenDetails.tsx
 msgid "Explore tokens"
 msgstr "Explorer les jetons"
@@ -1052,10 +1044,6 @@ msgstr "Dernier prix"
 #: src/pages/Pool/index.tsx
 msgid "Learn"
 msgstr "Apprendre"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Learn about providing liquidity"
-msgstr ""
 
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/PrivacyPolicy/index.tsx
@@ -2077,10 +2065,6 @@ msgstr ""
 #: src/components/NavBar/index.tsx
 msgid "Tokens"
 msgstr "Jetons"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Top pools"
-msgstr "Pools du haut"
 
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"

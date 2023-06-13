@@ -390,10 +390,6 @@ msgstr "更改"
 msgid "Check network status"
 msgstr "檢查網絡狀態"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "查看我們的 v3 流動池介紹和遷移指南。"
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
