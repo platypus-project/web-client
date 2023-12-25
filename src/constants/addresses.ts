@@ -76,16 +76,3 @@ export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
 export const TICK_LENS_ADDRESSES: AddressMap = {
   [SupportedChainId.PICADILLY]: '0x49E2b2eAE2c1Fc53822E76D9cc6F4fC1d3641292',
 }
-
-export const UNIVERSAL_ROUTER_ADDRESS = (chainId: SupportedChainId) => {
-  switch (chainId) {
-    case SupportedChainId.MAINNET:
-      return '0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B'
-    case SupportedChainId.PICADILLY:
-      return '0x5a44766198100D7B0fB615c5854E8149aF072Bd9'
-    case SupportedChainId.OPTIMISM:
-      return '0xb555edF5dcF85f42cEeF1f3630a52A108E55A654'
-    default:
-      throw new Error('Universal Router not deployed on chain ' + chainId)
-  }
-}
