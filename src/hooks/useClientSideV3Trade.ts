@@ -6,7 +6,6 @@ import { useSingleContractWithCallData } from 'lib/hooks/multicall'
 import { useMemo } from 'react'
 import { InterfaceTrade, TradeState } from 'state/routing/types'
 
-import { isCelo } from '../constants/tokens'
 import { useAllV3Routes } from './useAllV3Routes'
 import { useQuoter } from './useContract'
 
@@ -33,7 +32,7 @@ export function useClientSideV3Trade<TTradeType extends TradeType>(
 
   const { chainId } = useWeb3React()
   // Chains deployed using the deploy-v3 script only deploy QuoterV2.
-  const useQuoterV2 = useMemo(() => Boolean(chainId && isCelo(chainId)), [chainId])
+  const useQuoterV2 = useMemo(() => Boolean(chainId), [chainId])
   const quoter = useQuoter(useQuoterV2)
   const callData = useMemo(
     () =>
@@ -124,6 +123,13 @@ export function useClientSideV3Trade<TTradeType extends TradeType>(
 
     return {
       state: TradeState.VALID,
+      data: [
+        {
+          routev3: bestRoute,
+          inputAmount: amountIn,
+          outputAmount: amountOut,
+        },
+      ],
       trade: new InterfaceTrade({
         v2Routes: [],
         v3Routes: [

@@ -3,38 +3,33 @@ import { SupportedChainId } from './chains'
 
 type AddressMap = { [chainId: number]: string }
 
-export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x921262fe27047cc14770bD8935abe67224662AA7')
+export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984')
 
 // export const UNISWAP_NFT_AIRDROP_CLAIM_ADDRESS = '0x8B799381ac40b838BBA4131ffB26197C432AFe78'
 
 export const V2_FACTORY_ADDRESSES: AddressMap = {}
 export const V2_ROUTER_ADDRESS: AddressMap = {}
 
-// // celo v3 addresses
-// const CELO_V3_CORE_FACTORY_ADDRESSES = '0x60BE01B663A8F90eA986bCa41b658D85113E4E19'
-// const CELO_ROUTER_ADDRESS = '0xCE7C7b6bBEff85998B9B5F5A50F94De939789fF8'
-// const CELO_V3_MIGRATOR_ADDRESSES = '0x921262fe27047cc14770bD8935abe67224662AA7'
-// const CELO_MULTICALL_ADDRESS = '0xe23E1d8051A68f32d8c11489F34cBBa4BeE46Ab5'
-// const CELO_QUOTER_ADDRESSES = '0x10a256d8C7d1b8A0bc4aeeCE0882C083B66E07A0'
-// const CELO_NONFUNGIBLE_POSITION_MANAGER_ADDRESSES = 'test'
-// const CELO_TICK_LENS_ADDRESSES = 'test'
-
 /* V3 Contract Addresses */
 export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   // [SupportedChainId.CELO]: CELO_V3_CORE_FACTORY_ADDRESSES,
-  [SupportedChainId.PICADILLY]: '0x60BE01B663A8F90eA986bCa41b658D85113E4E19',
+  [SupportedChainId.MAINNET]: '0x1F98431c8aD98523631AE4a59f267346ea31F984',
+  [SupportedChainId.PICADILLY]: '0x8439Ac94c84D89339e41F798a28aA73737DA35Cd',
 }
 
 export const V3_MIGRATOR_ADDRESSES: AddressMap = {
-  ...constructSameAddressMap('0x921262fe27047cc14770bD8935abe67224662AA7', [SupportedChainId.PICADILLY]),
+  [SupportedChainId.MAINNET]: '0xA5644E29708357803b5A882D272c41cC0dF92B34',
+  [SupportedChainId.PICADILLY]: '0x338662C6e113aD9CfA4E2e755931643D8Cf1884B',
 }
 
 export const MULTICALL_ADDRESS: AddressMap = {
-  ...constructSameAddressMap('0xeaD2664185C74018268aCabd03cEB999AD773f68', [SupportedChainId.PICADILLY]),
+  [SupportedChainId.MAINNET]: '0x1F98415757620B543A52E61c46B32eB19261F984',
+  [SupportedChainId.PICADILLY]: '0x70A003CaE209c00cB569fd41FAcE47608DA23d0f',
 }
 
 export const SWAP_ROUTER_ADDRESSES: AddressMap = {
-  ...constructSameAddressMap('0xaebaBd54CdD1418b0eb88A5e877EdD6cbC5804f4', [SupportedChainId.PICADILLY]),
+  [SupportedChainId.MAINNET]: '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45',
+  [SupportedChainId.PICADILLY]: '0xeA370cBBff1927E6a73773b9665177278783c584',
 }
 
 /**
@@ -65,12 +60,13 @@ export const ARGENT_WALLET_DETECTOR_ADDRESS: AddressMap = {
 }
 
 export const QUOTER_ADDRESSES: AddressMap = {
-  ...constructSameAddressMap('0xE532d7f2d7680e60446b2d467F949CB2548eAeF2', [SupportedChainId.PICADILLY]),
+  [SupportedChainId.MAINNET]: '0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6',
+  [SupportedChainId.PICADILLY]: '0x212EFFCf1Ec21677E88B48D9D8b64Bb672E9aAC6',
 }
 
 export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap = {
-  [SupportedChainId.PICADILLY]: '0x98a1af57F0780180e046d9E10E9Ba6cbC2c2b0bE',
-  // [SupportedChainId.PICADILLY]: '0x97c08474E4e6F5448AE4a6042Ca63Eb79f22236d',
+  [SupportedChainId.MAINNET]: '0x7386bC7020013EC9D67c09Bb55c6a6a2fF7f2ea4',
+  [SupportedChainId.PICADILLY]: '0x7386bC7020013EC9D67c09Bb55c6a6a2fF7f2ea4',
 }
 
 export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
@@ -78,9 +74,18 @@ export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
 }
 
 export const TICK_LENS_ADDRESSES: AddressMap = {
-  [SupportedChainId.PICADILLY]: '0x3Dd73577Ea1E2c56c2b43839613cc5bff04D7D5b',
-  // [SupportedChainId.ARBITRUM_ONE]: testAddr,
-  // [SupportedChainId.ARBITRUM_RINKEBY]: testAddr,
-  // [SupportedChainId.CELO]: CELO_TICK_LENS_ADDRESSES,
-  // [SupportedChainId.CELO_ALFAJORES]: CELO_TICK_LENS_ADDRESSES,
+  [SupportedChainId.PICADILLY]: '0x49E2b2eAE2c1Fc53822E76D9cc6F4fC1d3641292',
+}
+
+export const UNIVERSAL_ROUTER_ADDRESS = (chainId: SupportedChainId) => {
+  switch (chainId) {
+    case SupportedChainId.MAINNET:
+      return '0xEf1c6E67703c7BD7107eed8303Fbe6EC2554BF6B'
+    case SupportedChainId.PICADILLY:
+      return '0x5a44766198100D7B0fB615c5854E8149aF072Bd9'
+    case SupportedChainId.OPTIMISM:
+      return '0xb555edF5dcF85f42cEeF1f3630a52A108E55A654'
+    default:
+      throw new Error('Universal Router not deployed on chain ' + chainId)
+  }
 }

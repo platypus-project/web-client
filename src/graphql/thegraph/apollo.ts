@@ -8,7 +8,7 @@ const CHAIN_SUBGRAPH_URL: Record<number, string> = {
 
   [SupportedChainId.OPTIMISM]: 'https://api.thegraph.com/subgraphs/name/ianlapham/optimism-post-regenesis',
   [SupportedChainId.PICADILLY]:
-    process.env.THE_GRAPH_SCHEMA_ENDPOINT || 'https://137.184.245.139:8000/subgraphs/name/uniswapv3',
+    process.env.THE_GRAPH_SCHEMA_ENDPOINT || 'http://24.144.80.231:8000/subgraphs/name/uniswapv3',
 }
 const httpLink = new HttpLink({ uri: CHAIN_SUBGRAPH_URL[SupportedChainId.MAINNET] })
 

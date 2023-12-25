@@ -1,4 +1,4 @@
-export const UNI_LIST = 'https://raw.githubusercontent.com/project-paltypus/token-list/main/paltypus.tokenlist.json'
+export const UNI_LIST = 'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json'
 // export const UNI_EXTENDED_LIST = 'https://extendedtokens.uniswap.org/'
 // const UNI_UNSUPPORTED_LIST = 'https://unsupportedtokens.uniswap.org/'
 // const AAVE_LIST = 'tokenlist.aave.eth'

@@ -218,12 +218,12 @@ export default function TokenSafety({
 
   // Logic for only showing the 'unsupported' warning if one is supported and other isn't
   if (token1 && token1Warning && (token1Unsupported || !(token2Warning && token2Unsupported))) {
-    logos.push(<CurrencyLogo currency={token1} size="48px" />)
-    urls.push(<ExplorerView token={token1} />)
+    logos.push(<CurrencyLogo currency={token1} size="48px" key={logos.length + 1} />)
+    urls.push(<ExplorerView token={token1} key={urls.length + 1} />)
   }
   if (token2 && token2Warning && (token2Unsupported || !(token1Warning && token1Unsupported))) {
-    logos.push(<CurrencyLogo currency={token2} size="48px" />)
-    urls.push(<ExplorerView token={token2} />)
+    logos.push(<CurrencyLogo currency={token2} size="48px" key={logos.length + 1} />)
+    urls.push(<ExplorerView token={token2} key={urls.length + 1} />)
   }
 
   const plural = logos.length > 1

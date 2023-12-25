@@ -70,7 +70,7 @@ export const colors = {
   green800: '#091F10',
   green900: '#09130B',
   greenVibrant: '#5CFE9D',
-  blue50: '#DFF8FF',
+  blue50: '#F4FDFF',
   blue100: '#DFF8FF',
   blue200: '#A8EBFF',
   blue300: '#66D1EF',
@@ -115,7 +115,7 @@ const commonTheme = {
   chain_137_background: colors.purple900,
   chain_10_background: colors.red900,
   chain_42161_background: colors.blue900,
-  chain_65100000: colors.blue400,
+  chain_65100001: colors.blue400,
 
   hoverState: opacify(24, colors.blue200),
   hoverDefault: opacify(8, colors.gray200),

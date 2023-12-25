@@ -652,7 +652,6 @@ export default function Swap({ className }: { className?: string }) {
                           )
                         }
                         showMaxButton={false}
-                        hideBalance={false}
                         fiatValue={fiatValueOutput ?? undefined}
                         priceImpact={stablecoinPriceImpact}
                         currency={currencies[Field.OUTPUT] ?? null}

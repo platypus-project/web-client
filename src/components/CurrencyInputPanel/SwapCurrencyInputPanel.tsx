@@ -221,7 +221,7 @@ export default function SwapCurrencyInputPanel({
   renderBalance,
   fiatValue,
   priceImpact,
-  hideBalance = false,
+  hideBalance = true,
   pair = null, // used for double token logo
   hideInput = false,
   locked = false,

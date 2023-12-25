@@ -86,8 +86,8 @@ const Navbar = () => {
           <Box className={styles.leftSideContainer}>
             <Box className={styles.logoContainer}>
               <UniIcon
-                width="48"
-                height="48"
+                width="80"
+                height="53"
                 data-testid="uniswap-logo"
                 className={styles.logo}
                 onClick={() => {

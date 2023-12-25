@@ -2,6 +2,7 @@ import { SupportedChainId } from '../constants/chains'
 
 const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [SupportedChainId.MAINNET]: 'https://etherscan.io',
+  [SupportedChainId.PICADILLY]: 'https://piccadilly.autonity.org',
   [SupportedChainId.OPTIMISM]: 'https://optimistic.etherscan.io',
 }
 
