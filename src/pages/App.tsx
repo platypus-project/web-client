@@ -4,7 +4,7 @@ import Loader from 'components/Loader'
 import TopLevelModals from 'components/TopLevelModals'
 import { useFeatureFlagsIsLoaded } from 'featureFlags'
 import ApeModeQueryParamReader from 'hooks/useApeModeQueryParamReader'
-import { Suspense, useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useIsDarkMode } from 'state/user/hooks'
 import styled from 'styled-components/macro'
@@ -34,6 +34,14 @@ import RemoveLiquidity from './RemoveLiquidity'
 import RemoveLiquidityV3 from './RemoveLiquidity/V3'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly } from './Swap/redirects'
+import Tokens from './Tokens'
+
+const TokenDetails = lazy(() => import('./TokenDetails'))
+const Vote = lazy(() => import('./Vote'))
+const NftExplore = lazy(() => import('nft/pages/explore'))
+const Collection = lazy(() => import('nft/pages/collection'))
+const Profile = lazy(() => import('nft/pages/profile/profile'))
+const Asset = lazy(() => import('nft/pages/asset/Asset'))
 
 const BodyWrapper = styled.div`
   display: flex;
@@ -98,6 +106,27 @@ function getCurrentPageFromLocation(locationPathname: string): InterfacePageName
   }
 }
 
+function getFromLocation(locationPathname: string) {
+  switch (true) {
+    case locationPathname.startsWith('/vote'):
+      return Vote
+    case locationPathname.startsWith('/tokens'):
+      return Tokens
+    case locationPathname.startsWith('/tokens/:chainName/'):
+      return TokenDetails
+    case locationPathname.startsWith('/nfts/profile'):
+      return Profile
+    case locationPathname.startsWith('/nfts/asset'):
+      return Asset
+    case locationPathname.startsWith('/nfts/collection'):
+      return Collection
+    case locationPathname.startsWith('/nfts'):
+      return NftExplore
+    default:
+      return undefined
+  }
+}
+
 export default function App() {
   const isLoaded = useFeatureFlagsIsLoaded()
 
@@ -112,6 +141,8 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0)
     setScrolledState(false)
+    // FIXED lint
+    getFromLocation(pathname)
   }, [pathname])
 
   useEffect(() => {
@@ -145,15 +176,6 @@ export default function App() {
   }, [])
 
   const isHeaderTransparent = !scrolledState
-
-  // const { account } = useWeb3React()
-  // const statsigUser: StatsigUser = useMemo(
-  //   () => ({
-  //     userID: getDeviceId(),
-  //     customIDs: { address: account ?? '' },
-  //   }),
-  //   [account]
-  // )
 
   return (
     <ErrorBoundary>
