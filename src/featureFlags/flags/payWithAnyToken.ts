@@ -3,7 +3,7 @@ import { useWeb3React } from '@web3-react/core'
 
 import { BaseVariant, FeatureFlag, useBaseFlag } from '../index'
 
-export function usePayWithAnyTokenFlag(): BaseVariant {
+function usePayWithAnyTokenFlag(): BaseVariant {
   return useBaseFlag(FeatureFlag.payWithAnyToken)
 }
 
@@ -20,5 +20,3 @@ export function usePayWithAnyTokenEnabled(): boolean {
     return false
   }
 }
-
-export { BaseVariant as PayWithAnyTokenVariant }
