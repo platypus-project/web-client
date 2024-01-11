@@ -2265,7 +2265,7 @@ msgstr ""
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/nft/components/collection/TransactionCompleteModal.tsx
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
-msgid "View on Etherscan"
+msgid "View on Explorer"
 msgstr "Θέα στο Ethercan"
 
 #: src/components/AccountDetails/index.tsx

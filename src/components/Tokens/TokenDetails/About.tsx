@@ -105,10 +105,7 @@ export function AboutSection({ address, chainId, description, homepageUrl, twitt
         <Trans>Links</Trans>
       </ThemedText.SubHeaderSmall>
       <ResourcesContainer data-cy="resources-container">
-        <Resource
-          name={chainId === SupportedChainId.MAINNET ? 'Etherscan' : 'Block Explorer'}
-          link={`${baseExplorerUrl}${address === 'NATIVE' ? '' : 'address/' + address}`}
-        />
+        <Resource name="Explorer" link={`${baseExplorerUrl}${address === 'NATIVE' ? '' : 'address/' + address}`} />
         <Resource name="More analytics" link={`https://info.uniswap.org/#/tokens/${address}`} />
         {homepageUrl && <Resource name="Website" link={homepageUrl} />}
         {twitterName && <Resource name="Twitter" link={`https://twitter.com/${twitterName}`} />}
