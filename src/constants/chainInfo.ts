@@ -7,7 +7,7 @@ import { OPTIMISM_LIST, PICADILLY_LIST } from './lists'
 
 export const AVERAGE_L1_BLOCK_TIME = ms`12s`
 
-export enum NetworkType {
+enum NetworkType {
   L1,
   L2,
 }

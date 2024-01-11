@@ -111,21 +111,19 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
   ...(WETH9 as Record<SupportedChainId, Token>),
   [SupportedChainId.PICADILLY]: new Token(
     SupportedChainId.PICADILLY,
-    '0xbfeFf56be34305B402274a976033577B1A182748',
+    '0xcE17e51cE4F0417A1aB31a3c5d6831ff3BbFa1d2',
     18,
-    'ATN',
-    'Picadilly native asset'
+    'WATN',
+    'Wrapped Auton'
   ),
 }
 
-export function isCelo(chainId: number): boolean {
-  return false
-}
-
+// eslint-disable-next-line
 function getCeloNativeCurrency(chainId: number) {
   throw new Error('Not celo')
 }
 
+// eslint-disable-next-line
 function isMatic(chainId: number): boolean {
   return false
 }

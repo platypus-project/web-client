@@ -390,10 +390,6 @@ msgstr "Módosítás"
 msgid "Check network status"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "Nézze meg a v3 LP használati és migrációs útmutatókat."
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
@@ -837,10 +833,6 @@ msgstr ""
 msgid "Explore NFTs"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr ""
-
 #: src/components/Tokens/TokenDetails/InvalidTokenDetails.tsx
 msgid "Explore tokens"
 msgstr ""
@@ -1053,10 +1045,6 @@ msgstr ""
 #: src/pages/Pool/index.tsx
 msgid "Learn"
 msgstr "Tanulás"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Learn about providing liquidity"
-msgstr ""
 
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/PrivacyPolicy/index.tsx
@@ -2079,10 +2067,6 @@ msgstr ""
 msgid "Tokens"
 msgstr "Tokenek"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Top pools"
-msgstr "Legjobb poolok"
-
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"
 msgstr ""
@@ -2282,8 +2266,8 @@ msgstr ""
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/nft/components/collection/TransactionCompleteModal.tsx
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
-msgid "View on Etherscan"
-msgstr "Nézd meg az Etherscan webhelyen"
+msgid "View on Explorer"
+msgstr "Nézd meg az Explorer webhelyen"
 
 #: src/components/AccountDetails/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx

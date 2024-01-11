@@ -390,10 +390,6 @@ msgstr "変更"
 msgid "Check network status"
 msgstr "ネットワークの状態を確認"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "V3の流動性と移行ガイドをご覧ください。"
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
@@ -836,10 +832,6 @@ msgstr ""
 msgid "Explore NFTs"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr "Uniswap Analyticsをご覧ください。"
-
 #: src/components/Tokens/TokenDetails/InvalidTokenDetails.tsx
 msgid "Explore tokens"
 msgstr ""
@@ -1052,10 +1044,6 @@ msgstr ""
 #: src/pages/Pool/index.tsx
 msgid "Learn"
 msgstr "資料"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Learn about providing liquidity"
-msgstr "流動性の提供について学ぶ"
 
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/PrivacyPolicy/index.tsx
@@ -2078,10 +2066,6 @@ msgstr "トークン名"
 msgid "Tokens"
 msgstr "トークン"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Top pools"
-msgstr "上位のプール"
-
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"
 msgstr "Uniswapの上位トークン"
@@ -2281,8 +2265,8 @@ msgstr ""
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/nft/components/collection/TransactionCompleteModal.tsx
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
-msgid "View on Etherscan"
-msgstr "Etherscanで見る"
+msgid "View on Explorer"
+msgstr "Explorerで見る"
 
 #: src/components/AccountDetails/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx

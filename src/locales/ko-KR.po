@@ -390,10 +390,6 @@ msgstr "변경"
 msgid "Check network status"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "v3 LP 연습 및 마이그레이션 가이드를 확인하세요."
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
@@ -836,10 +832,6 @@ msgstr ""
 msgid "Explore NFTs"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr "Uniswap 분석 정보를 살펴보세요."
-
 #: src/components/Tokens/TokenDetails/InvalidTokenDetails.tsx
 msgid "Explore tokens"
 msgstr ""
@@ -1052,10 +1044,6 @@ msgstr ""
 #: src/pages/Pool/index.tsx
 msgid "Learn"
 msgstr "학습"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Learn about providing liquidity"
-msgstr ""
 
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/PrivacyPolicy/index.tsx
@@ -2078,10 +2066,6 @@ msgstr ""
 msgid "Tokens"
 msgstr "토큰"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Top pools"
-msgstr "상위 풀"
-
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"
 msgstr ""
@@ -2281,8 +2265,8 @@ msgstr ""
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/nft/components/collection/TransactionCompleteModal.tsx
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
-msgid "View on Etherscan"
-msgstr "Etherscan에서보기"
+msgid "View on Explorer"
+msgstr "Explorer에서보기"
 
 #: src/components/AccountDetails/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx

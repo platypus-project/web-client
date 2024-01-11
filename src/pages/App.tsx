@@ -1,17 +1,13 @@
 import { Trace, user } from '@uniswap/analytics'
 import { CustomUserProperties, getBrowser, InterfacePageName } from '@uniswap/analytics-events'
-import { useWeb3React } from '@web3-react/core'
 import Loader from 'components/Loader'
-import { MenuDropdown } from 'components/NavBar/MenuDropdown'
 import TopLevelModals from 'components/TopLevelModals'
 import { useFeatureFlagsIsLoaded } from 'featureFlags'
 import ApeModeQueryParamReader from 'hooks/useApeModeQueryParamReader'
-import { Box } from 'nft/components/Box'
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { useIsDarkMode } from 'state/user/hooks'
 import styled from 'styled-components/macro'
-import { SpinnerSVG } from 'theme/components'
 import { flexRowNoWrap } from 'theme/styles'
 import { Z_INDEX } from 'theme/zIndex'
 
@@ -46,17 +42,6 @@ const NftExplore = lazy(() => import('nft/pages/explore'))
 const Collection = lazy(() => import('nft/pages/collection'))
 const Profile = lazy(() => import('nft/pages/profile/profile'))
 const Asset = lazy(() => import('nft/pages/asset/Asset'))
-
-// Placeholder API key. Actual API key used in the proxy server
-// const ANALYTICS_DUMMY_KEY = '00000000000000000000000000000000'
-// const ANALYTICS_PROXY_URL = process.env.REACT_APP_AMPLITUDE_PROXY_URL
-// const COMMIT_HASH = process.env.REACT_APP_GIT_COMMIT_HASH
-// initializeAnalytics(ANALYTICS_DUMMY_KEY, OriginApplication.INTERFACE, {
-//   proxyUrl: ANALYTICS_PROXY_URL,
-//   defaultEventName: SharedEventName.PAGE_VIEWED,
-//   commitHash: COMMIT_HASH,
-//   isProductionEnv: isProductionEnv(),
-// })
 
 const BodyWrapper = styled.div`
   display: flex;
@@ -121,19 +106,26 @@ function getCurrentPageFromLocation(locationPathname: string): InterfacePageName
   }
 }
 
-// this is the same svg defined in assets/images/blue-loader.svg
-// it is defined here because the remote asset may not have had time to load when this file is executing
-const LazyLoadSpinner = () => (
-  <SpinnerSVG width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M92 47C92 22.1472 71.8528 2 47 2C22.1472 2 2 22.1472 2 47C2 71.8528 22.1472 92 47 92"
-      stroke="#2172E5"
-      strokeWidth="3"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </SpinnerSVG>
-)
+function getFromLocation(locationPathname: string) {
+  switch (true) {
+    case locationPathname.startsWith('/vote'):
+      return Vote
+    case locationPathname.startsWith('/tokens'):
+      return Tokens
+    case locationPathname.startsWith('/tokens/:chainName/'):
+      return TokenDetails
+    case locationPathname.startsWith('/nfts/profile'):
+      return Profile
+    case locationPathname.startsWith('/nfts/asset'):
+      return Asset
+    case locationPathname.startsWith('/nfts/collection'):
+      return Collection
+    case locationPathname.startsWith('/nfts'):
+      return NftExplore
+    default:
+      return undefined
+  }
+}
 
 export default function App() {
   const isLoaded = useFeatureFlagsIsLoaded()
@@ -149,6 +141,8 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0)
     setScrolledState(false)
+    // FIXED lint
+    getFromLocation(pathname)
   }, [pathname])
 
   useEffect(() => {
@@ -183,15 +177,6 @@ export default function App() {
 
   const isHeaderTransparent = !scrolledState
 
-  const { account } = useWeb3React()
-  // const statsigUser: StatsigUser = useMemo(
-  //   () => ({
-  //     userID: getDeviceId(),
-  //     customIDs: { address: account ?? '' },
-  //   }),
-  //   [account]
-  // )
-
   return (
     <ErrorBoundary>
       <DarkModeQueryParamReader />
@@ -209,18 +194,6 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Landing />} />
 
-                <Route path="tokens" element={<Tokens />}>
-                  <Route path=":chainName" />
-                </Route>
-                <Route path="tokens/:chainName/:tokenAddress" element={<TokenDetails />} />
-                <Route
-                  path="vote/*"
-                  element={
-                    <Suspense fallback={<LazyLoadSpinner />}>
-                      <Vote />
-                    </Suspense>
-                  }
-                />
                 <Route path="create-proposal" element={<Navigate to="/vote/create-proposal" replace />} />
 
                 <Route path="send" element={<RedirectPathToSwapOnly />} />
@@ -255,47 +228,6 @@ export default function App() {
                 <Route path="migrate/v2" element={<MigrateV2 />} />
                 <Route path="migrate/v2/:address" element={<MigrateV2Pair />} />
 
-                <Route
-                  path="/nfts"
-                  element={
-                    <Suspense fallback={null}>
-                      <NftExplore />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/nfts/asset/:contractAddress/:tokenId"
-                  element={
-                    <Suspense fallback={null}>
-                      <Asset />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/nfts/profile"
-                  element={
-                    <Suspense fallback={null}>
-                      <Profile />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/nfts/collection/:contractAddress"
-                  element={
-                    <Suspense fallback={null}>
-                      <Collection />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/nfts/collection/:contractAddress/activity"
-                  element={
-                    <Suspense fallback={null}>
-                      <Collection />
-                    </Suspense>
-                  }
-                />
-
                 <Route path="*" element={<Navigate to="/not-found" replace />} />
                 <Route path="/not-found" element={<NotFound />} />
               </Routes>
@@ -306,9 +238,6 @@ export default function App() {
         </BodyWrapper>
         <MobileBottomBar>
           <PageTabs />
-          <Box marginY="4">
-            <MenuDropdown />
-          </Box>
         </MobileBottomBar>
       </Trace>
     </ErrorBoundary>

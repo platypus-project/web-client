@@ -47,20 +47,17 @@ export default function RadialGradientByChainUpdater(): null {
     }
 
     switch (chainId) {
-      case SupportedChainId.OPTIMISM: {
+      case SupportedChainId.PICADILLY: {
         setBackground(backgroundResetStyles)
-        const optimismLightGradient =
-          'radial-gradient(100% 100% at 50% 0%, rgba(255, 251, 242, 0.8) 0%, rgba(255, 244, 249, 0.6958) 50.52%, rgba(255, 255, 255, 0) 100%), #FFFFFF'
-        const optimismDarkGradient =
-          'radial-gradient(100% 100% at 50% 0%, rgba(62, 46, 56, 0.8) 0%, rgba(44, 31, 45, 0.6958) 50.52%, rgba(31, 33, 40, 0) 100%), #0D0E0E'
-        backgroundRadialGradientElement.style.background = darkMode ? optimismDarkGradient : optimismLightGradient
+        const picadillyLightGradient = 'linear-gradient(180deg, #D9F6FE 0%, #FFFFFF 100%)'
+        const picadillyDarkGradient = 'linear-gradient(0deg, #07080F 0%, #121C28 101.83%)'
+        backgroundRadialGradientElement.style.background = darkMode ? picadillyDarkGradient : picadillyLightGradient
         break
       }
       default: {
-        setBackground(initialStyles)
-        const defaultLightGradient =
-          'radial-gradient(100% 100% at 50% 0%, rgba(255, 184, 226, 0.51) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF'
-        const defaultDarkGradient = 'linear-gradient(180deg, #202738 0%, #070816 100%)'
+        setBackground(backgroundResetStyles)
+        const defaultLightGradient = 'linear-gradient(180deg, #D9F6FE 0%, #FFFFFF 100%)'
+        const defaultDarkGradient = 'linear-gradient(0deg, #07080F 0%, #121C28 101.83%)'
         backgroundRadialGradientElement.style.background = darkMode ? defaultDarkGradient : defaultLightGradient
       }
     }

@@ -390,10 +390,6 @@ msgstr "更改"
 msgid "Check network status"
 msgstr "检查网络状态"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "查看我们的v3流动池介绍和迁移指南。"
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
@@ -836,10 +832,6 @@ msgstr ""
 msgid "Explore NFTs"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Explore Uniswap Analytics."
-msgstr "查看 Uniswap 分析。"
-
 #: src/components/Tokens/TokenDetails/InvalidTokenDetails.tsx
 msgid "Explore tokens"
 msgstr ""
@@ -1052,10 +1044,6 @@ msgstr ""
 #: src/pages/Pool/index.tsx
 msgid "Learn"
 msgstr "学习"
-
-#: src/pages/Pool/CTACards.tsx
-msgid "Learn about providing liquidity"
-msgstr "了解提供流动性的相关信息"
 
 #: src/components/PrivacyPolicy/index.tsx
 #: src/components/PrivacyPolicy/index.tsx
@@ -2078,10 +2066,6 @@ msgstr ""
 msgid "Tokens"
 msgstr "代币"
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Top pools"
-msgstr "顶级流动池"
-
 #: src/pages/Tokens/index.tsx
 msgid "Top tokens on Uniswap"
 msgstr ""
@@ -2281,8 +2265,8 @@ msgstr ""
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/nft/components/collection/TransactionCompleteModal.tsx
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
-msgid "View on Etherscan"
-msgstr "在 Etherscan 上查看"
+msgid "View on Explorer"
+msgstr "在 Explorer 上查看"
 
 #: src/components/AccountDetails/index.tsx
 #: src/components/TransactionConfirmationModal/index.tsx

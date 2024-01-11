@@ -1,7 +1,6 @@
 import { Currency, Token } from '@uniswap/sdk-core'
 import TokenSafety from 'components/TokenSafety'
 import { memo, useCallback, useEffect, useState } from 'react'
-import { useUserAddedTokens } from 'state/user/hooks'
 
 import useLast from '../../hooks/useLast'
 import { useWindowSize } from '../../hooks/useWindowSize'
@@ -39,7 +38,6 @@ export default memo(function CurrencySearchModal({
 }: CurrencySearchModalProps) {
   const [modalView, setModalView] = useState<CurrencyModalView>(CurrencyModalView.search)
   const lastOpen = useLast(isOpen)
-  const userAddedTokens = useUserAddedTokens()
 
   useEffect(() => {
     if (isOpen && !lastOpen) {
@@ -47,24 +45,15 @@ export default memo(function CurrencySearchModal({
     }
   }, [isOpen, lastOpen])
 
-  const showTokenSafetySpeedbump = (token: Token) => {
-    setWarningToken(token)
-    setModalView(CurrencyModalView.tokenSafety)
-  }
-
   const handleCurrencySelect = useCallback(
-    (currency: Currency, hasWarning?: boolean) => {
-      if (hasWarning && currency.isToken && !userAddedTokens.find((token) => token.equals(currency))) {
-        showTokenSafetySpeedbump(currency)
-      } else {
-        onCurrencySelect(currency)
-        onDismiss()
-      }
+    (currency: Currency) => {
+      onCurrencySelect(currency)
+      onDismiss()
     },
-    [onDismiss, onCurrencySelect, userAddedTokens]
+    [onDismiss, onCurrencySelect]
   )
   // used for token safety
-  const [warningToken, setWarningToken] = useState<Token | undefined>()
+  const [warningToken] = useState<Token | undefined>()
 
   const { height: windowHeight } = useWindowSize()
   // change min height if not searching

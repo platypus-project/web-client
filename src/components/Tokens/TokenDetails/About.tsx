@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
-import { SupportedChainId } from '@uniswap/sdk-core'
 import { getChainInfo } from 'constants/chainInfo'
+import { SupportedChainId } from 'constants/chains'
 import { darken } from 'polished'
 import { useState } from 'react'
 import styled from 'styled-components/macro'
@@ -79,6 +79,7 @@ export function AboutSection({ address, chainId, description, homepageUrl, twitt
 
   const tokenDescription = shouldTruncate && isDescriptionTruncated ? truncateDescription(description) : description
 
+  // eslint-disable-next-line
   const baseExplorerUrl = getChainInfo(chainId)!.explorer
 
   return (
@@ -104,10 +105,7 @@ export function AboutSection({ address, chainId, description, homepageUrl, twitt
         <Trans>Links</Trans>
       </ThemedText.SubHeaderSmall>
       <ResourcesContainer data-cy="resources-container">
-        <Resource
-          name={chainId === SupportedChainId.MAINNET ? 'Etherscan' : 'Block Explorer'}
-          link={`${baseExplorerUrl}${address === 'NATIVE' ? '' : 'address/' + address}`}
-        />
+        <Resource name="Explorer" link={`${baseExplorerUrl}${address === 'NATIVE' ? '' : 'address/' + address}`} />
         <Resource name="More analytics" link={`https://info.uniswap.org/#/tokens/${address}`} />
         {homepageUrl && <Resource name="Website" link={homepageUrl} />}
         {twitterName && <Resource name="Twitter" link={`https://twitter.com/${twitterName}`} />}

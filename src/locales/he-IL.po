@@ -390,10 +390,6 @@ msgstr "שינוי"
 msgid "Check network status"
 msgstr ""
 
-#: src/pages/Pool/CTACards.tsx
-msgid "Check out our v3 LP walkthrough and migration guides."
-msgstr "עיין במדריכי ההדרכה וההעברה של v3 LP שלנו."
-
 #: src/components/AccountDetailsV2/TransactionBody.tsx
 #: src/components/WalletDropdown/AuthenticatedHeader.tsx
 msgid "Claim"
@@ -2281,7 +2277,7 @@ msgstr ""
 #: src/components/TransactionConfirmationModal/index.tsx
 #: src/nft/components/collection/TransactionCompleteModal.tsx
 #: src/pages/CreateProposal/ProposalSubmissionModal.tsx
-msgid "View on Etherscan"
+msgid "View on Explorer"
 msgstr "מבט על אתרסקאן"
 
 #: src/components/AccountDetails/index.tsx

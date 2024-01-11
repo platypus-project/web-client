@@ -3,7 +3,7 @@
 require('dotenv').config({ path: '.env.production' })
 
 const { exec } = require('child_process')
-const dataConfig = require('./graphql.config')
+// const dataConfig = require('./graphql.config')
 const thegraphConfig = require('./graphql_thegraph.config')
 
 function fetchSchema(url, outputFile) {
@@ -20,4 +20,4 @@ function fetchSchema(url, outputFile) {
 }
 
 fetchSchema(process.env.THE_GRAPH_SCHEMA_ENDPOINT, thegraphConfig.schema)
-fetchSchema(process.env.REACT_APP_AWS_API_ENDPOINT, dataConfig.schema)
+// fetchSchema(process.env.REACT_APP_AWS_API_ENDPOINT, dataConfig.schema)

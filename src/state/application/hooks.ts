@@ -138,14 +138,6 @@ export function useToggleExecuteModal(): () => void {
   return useToggleModal(ApplicationModal.EXECUTE)
 }
 
-export function useTogglePrivacyPolicy(): () => void {
-  return useToggleModal(ApplicationModal.PRIVACY_POLICY)
-}
-
-export function useToggleFeatureFlags(): () => void {
-  return useToggleModal(ApplicationModal.FEATURE_FLAGS)
-}
-
 // returns a function that allows adding a popup
 export function useAddPopup(): (content: PopupContent, key?: string, removeAfterMs?: number) => void {
   const dispatch = useAppDispatch()

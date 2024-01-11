@@ -1,4 +1,4 @@
-export const UNI_LIST = 'https://raw.githubusercontent.com/project-paltypus/token-list/main/paltypus.tokenlist.json'
+export const UNI_LIST = 'https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json'
 // export const UNI_EXTENDED_LIST = 'https://extendedtokens.uniswap.org/'
 // const UNI_UNSUPPORTED_LIST = 'https://unsupportedtokens.uniswap.org/'
 // const AAVE_LIST = 'tokenlist.aave.eth'
@@ -21,7 +21,7 @@ export const PICADILLY_LIST =
 export const UNSUPPORTED_LIST_URLS: string[] = []
 
 // default lists to be 'active' aka searched across
-export const DEFAULT_ACTIVE_LIST_URLS: string[] = []
+export const DEFAULT_ACTIVE_LIST_URLS: string[] = [PICADILLY_LIST, UNI_LIST]
 export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
   // UNI_EXTENDED_LIST,
   // COMPOUND_LIST,
@@ -34,7 +34,6 @@ export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
   // SET_LIST,
   OPTIMISM_LIST,
   // CELO_LIST,
-  PICADILLY_LIST,
   ...UNSUPPORTED_LIST_URLS,
 ]
 

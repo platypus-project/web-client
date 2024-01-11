@@ -3,7 +3,7 @@
  */
 export enum SupportedChainId {
   MAINNET = 1,
-  PICADILLY = 65100000,
+  PICADILLY = 65100001,
   OPTIMISM = 10,
 }
 

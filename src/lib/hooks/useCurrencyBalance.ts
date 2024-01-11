@@ -18,8 +18,6 @@ export function useNativeCurrencyBalances(uncheckedAddresses?: (string | undefin
   [address: string]: CurrencyAmount<Currency> | undefined
 } {
   const { chainId } = useWeb3React()
-  console.log(chainId, 'chainid')
-  console.log(uncheckedAddresses, 'uncheckedAddresses')
   const multicallContract = useInterfaceMulticall()
 
   const validAddressInputs: [string][] = useMemo(
@@ -33,9 +31,7 @@ export function useNativeCurrencyBalances(uncheckedAddresses?: (string | undefin
         : [],
     [uncheckedAddresses]
   )
-
   const results = useSingleContractMultipleData(multicallContract, 'getEthBalance', validAddressInputs)
-  console.log(results, 'results')
 
   return useMemo(
     () =>

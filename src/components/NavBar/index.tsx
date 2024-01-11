@@ -49,6 +49,7 @@ const MenuItem = ({ href, dataTestId, id, isActive, children }: MenuItemProps) =
 export const PageTabs = () => {
   const { pathname } = useLocation()
   const { chainId: connectedChainId } = useWeb3React()
+  // eslint-disable-next-line
   const chainName = chainIdToBackendName(connectedChainId)
 
   const isPoolActive =
@@ -57,6 +58,7 @@ export const PageTabs = () => {
     pathname.startsWith('/remove') ||
     pathname.startsWith('/increase')
 
+  // eslint-disable-next-line
   const isNftPage = useIsNftPage()
 
   return (
@@ -84,8 +86,8 @@ const Navbar = () => {
           <Box className={styles.leftSideContainer}>
             <Box className={styles.logoContainer}>
               <UniIcon
-                width="48"
-                height="48"
+                width="80"
+                height="53"
                 data-testid="uniswap-logo"
                 className={styles.logo}
                 onClick={() => {
