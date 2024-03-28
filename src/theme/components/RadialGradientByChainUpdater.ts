@@ -47,11 +47,11 @@ export default function RadialGradientByChainUpdater(): null {
     }
 
     switch (chainId) {
-      case SupportedChainId.PICADILLY: {
+      case SupportedChainId.PICCADILLY: {
         setBackground(backgroundResetStyles)
-        const picadillyLightGradient = 'linear-gradient(180deg, #D9F6FE 0%, #FFFFFF 100%)'
-        const picadillyDarkGradient = 'linear-gradient(0deg, #07080F 0%, #121C28 101.83%)'
-        backgroundRadialGradientElement.style.background = darkMode ? picadillyDarkGradient : picadillyLightGradient
+        const piccadillyLightGradient = 'linear-gradient(180deg, #D9F6FE 0%, #FFFFFF 100%)'
+        const piccadillyDarkGradient = 'linear-gradient(0deg, #07080F 0%, #121C28 101.83%)'
+        backgroundRadialGradientElement.style.background = darkMode ? piccadillyDarkGradient : piccadillyLightGradient
         break
       }
       default: {

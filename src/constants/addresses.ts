@@ -14,22 +14,22 @@ export const V2_ROUTER_ADDRESS: AddressMap = {}
 export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   // [SupportedChainId.CELO]: CELO_V3_CORE_FACTORY_ADDRESSES,
   [SupportedChainId.MAINNET]: '0x1F98431c8aD98523631AE4a59f267346ea31F984',
-  [SupportedChainId.PICADILLY]: '0x8439Ac94c84D89339e41F798a28aA73737DA35Cd',
+  [SupportedChainId.PICCADILLY]: '0xb4c40146E21D8A17548B1606A0D4f7d29A1d50eC',
 }
 
 export const V3_MIGRATOR_ADDRESSES: AddressMap = {
   [SupportedChainId.MAINNET]: '0xA5644E29708357803b5A882D272c41cC0dF92B34',
-  [SupportedChainId.PICADILLY]: '0x338662C6e113aD9CfA4E2e755931643D8Cf1884B',
+  [SupportedChainId.PICCADILLY]: '0xb981585F3Bc2c16d6AD35436D4aD88B888bE8a47',
 }
 
 export const MULTICALL_ADDRESS: AddressMap = {
   [SupportedChainId.MAINNET]: '0x1F98415757620B543A52E61c46B32eB19261F984',
-  [SupportedChainId.PICADILLY]: '0x70A003CaE209c00cB569fd41FAcE47608DA23d0f',
+  [SupportedChainId.PICCADILLY]: '0xEE15750b70f5Cef398F0713406873ac0B2634DC5',
 }
 
 export const SWAP_ROUTER_ADDRESSES: AddressMap = {
   [SupportedChainId.MAINNET]: '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45',
-  [SupportedChainId.PICADILLY]: '0xeA370cBBff1927E6a73773b9665177278783c584',
+  [SupportedChainId.PICCADILLY]: '0xdE7fCeDADA60ea6eE5C59E62Db21bF7cCB6A72B9',
 }
 
 /**
@@ -40,39 +40,39 @@ export const GOVERNANCE_ALPHA_V0_ADDRESSES: AddressMap = {}
  * The older V1 governance address
  */
 export const GOVERNANCE_ALPHA_V1_ADDRESSES: AddressMap = {
-  // [SupportedChainId.PICADILLY]: testAddr,
+  // [SupportedChainId.PICCADILLY]: testAddr,
 }
 /**
  * The latest governor bravo that is currently admin of timelock
  */
 export const GOVERNANCE_BRAVO_ADDRESSES: AddressMap = {
-  // [SupportedChainId.PICADILLY]: testAddr,
+  // [SupportedChainId.PICCADILLY]: testAddr,
 }
 
 export const TIMELOCK_ADDRESS: AddressMap = {}
 
 export const MERKLE_DISTRIBUTOR_ADDRESS: AddressMap = {
-  // [SupportedChainId.PICADILLY]: testAddr,
+  // [SupportedChainId.PICCADILLY]: testAddr,
 }
 
 export const ARGENT_WALLET_DETECTOR_ADDRESS: AddressMap = {
-  // [SupportedChainId.PICADILLY]: testAddr,
+  // [SupportedChainId.PICCADILLY]: testAddr,
 }
 
 export const QUOTER_ADDRESSES: AddressMap = {
   [SupportedChainId.MAINNET]: '0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6',
-  [SupportedChainId.PICADILLY]: '0x212EFFCf1Ec21677E88B48D9D8b64Bb672E9aAC6',
+  [SupportedChainId.PICCADILLY]: '0x2c53E677EcAcde0f354B48da9FC421f5C7e8dB54',
 }
 
 export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap = {
   [SupportedChainId.MAINNET]: '0x7386bC7020013EC9D67c09Bb55c6a6a2fF7f2ea4',
-  [SupportedChainId.PICADILLY]: '0x7386bC7020013EC9D67c09Bb55c6a6a2fF7f2ea4',
+  [SupportedChainId.PICCADILLY]: '0x8063032929A93F383aA923AEdCad9251eC6cF8eF',
 }
 
 export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
-  // [SupportedChainId.PICADILLY]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+  // [SupportedChainId.PICCADILLY]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
 }
 
 export const TICK_LENS_ADDRESSES: AddressMap = {
-  [SupportedChainId.PICADILLY]: '0x49E2b2eAE2c1Fc53822E76D9cc6F4fC1d3641292',
+  [SupportedChainId.PICCADILLY]: '0x0c757516197393ff7b5b6131F679550b0820a462',
 }

@@ -6,7 +6,7 @@ import { isAddress } from 'utils'
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import { NATIVE_CHAIN_ID } from '../../constants/tokens'
 
-type Network = 'ethereum' | 'arbitrum' | 'optimism' | 'polygon' | 'picadilly'
+type Network = 'ethereum' | 'arbitrum' | 'optimism' | 'polygon' | 'piccadilly'
 
 // eslint-disable-next-line
 export function chainIdToNetworkName(networkId: SupportedChainId): Network {
@@ -15,8 +15,8 @@ export function chainIdToNetworkName(networkId: SupportedChainId): Network {
       return 'ethereum'
     case SupportedChainId.OPTIMISM:
       return 'optimism'
-    case SupportedChainId.PICADILLY:
-      return 'picadilly'
+    case SupportedChainId.PICCADILLY:
+      return 'piccadilly'
     default:
       return 'ethereum'
   }

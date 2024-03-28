@@ -109,8 +109,8 @@ export const UNI: { [chainId: number]: Token } = {
 
 export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } = {
   ...(WETH9 as Record<SupportedChainId, Token>),
-  [SupportedChainId.PICADILLY]: new Token(
-    SupportedChainId.PICADILLY,
+  [SupportedChainId.PICCADILLY]: new Token(
+    SupportedChainId.PICCADILLY,
     '0xcE17e51cE4F0417A1aB31a3c5d6831ff3BbFa1d2',
     18,
     'WATN',

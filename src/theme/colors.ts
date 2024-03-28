@@ -115,7 +115,7 @@ const commonTheme = {
   chain_137_background: colors.purple900,
   chain_10_background: colors.red900,
   chain_42161_background: colors.blue900,
-  chain_65100001: colors.blue400,
+  chain_65100002: colors.blue400,
 
   hoverState: opacify(24, colors.blue200),
   hoverDefault: opacify(8, colors.gray200),

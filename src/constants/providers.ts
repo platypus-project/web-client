@@ -60,6 +60,6 @@ class AppJsonRpcProvider extends StaticJsonRpcProvider {
  */
 export const RPC_PROVIDERS: { [key in SupportedChainId]: StaticJsonRpcProvider } = {
   [SupportedChainId.MAINNET]: new AppJsonRpcProvider(SupportedChainId.MAINNET),
-  [SupportedChainId.PICADILLY]: new AppJsonRpcProvider(SupportedChainId.PICADILLY),
+  [SupportedChainId.PICCADILLY]: new AppJsonRpcProvider(SupportedChainId.PICCADILLY),
   [SupportedChainId.OPTIMISM]: new AppJsonRpcProvider(SupportedChainId.OPTIMISM),
 }

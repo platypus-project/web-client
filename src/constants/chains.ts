@@ -3,13 +3,13 @@
  */
 export enum SupportedChainId {
   MAINNET = 1,
-  PICADILLY = 65100001,
+  PICCADILLY = 65100002,
   OPTIMISM = 10,
 }
 
 export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.MAINNET]: 'mainnet',
-  [SupportedChainId.PICADILLY]: 'picadilly',
+  [SupportedChainId.PICCADILLY]: 'piccadilly',
   [SupportedChainId.OPTIMISM]: 'optimism',
 }
 
@@ -29,16 +29,16 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [SupportedChainId.MAINNET]
 /**
  * Unsupported networks for V2 pool behavior.
  */
-export const UNSUPPORTED_V2POOL_CHAIN_IDS = [SupportedChainId.PICADILLY]
+export const UNSUPPORTED_V2POOL_CHAIN_IDS = [SupportedChainId.PICCADILLY]
 
-export const TESTNET_CHAIN_IDS = [SupportedChainId.PICADILLY] as const
+export const TESTNET_CHAIN_IDS = [SupportedChainId.PICCADILLY] as const
 
 export type SupportedTestnetChainId = typeof TESTNET_CHAIN_IDS[number]
 
 /**
  * All the chain IDs that are running the Ethereum protocol.
  */
-export const L1_CHAIN_IDS = [SupportedChainId.MAINNET, SupportedChainId.PICADILLY] as const
+export const L1_CHAIN_IDS = [SupportedChainId.MAINNET, SupportedChainId.PICCADILLY] as const
 
 export type SupportedL1ChainId = typeof L1_CHAIN_IDS[number]
 

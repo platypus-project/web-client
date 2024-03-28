@@ -24,7 +24,7 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
     'https://rpc.ankr.com/eth',
     'https://eth-mainnet.public.blastapi.io',
   ],
-  [SupportedChainId.PICADILLY]: [
+  [SupportedChainId.PICCADILLY]: [
     // "Safe" URLs
     `https://rpc1.piccadilly.autonity.org/`,
   ],
@@ -43,6 +43,6 @@ export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
     `https://mainnet.infura.io/v3/${INFURA_KEY}`,
     ...FALLBACK_URLS[SupportedChainId.MAINNET],
   ],
-  [SupportedChainId.PICADILLY]: FALLBACK_URLS[SupportedChainId.PICADILLY],
+  [SupportedChainId.PICCADILLY]: FALLBACK_URLS[SupportedChainId.PICCADILLY],
   [SupportedChainId.OPTIMISM]: FALLBACK_URLS[SupportedChainId.OPTIMISM],
 }

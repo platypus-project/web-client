@@ -3,7 +3,7 @@ import ms from 'ms.macro'
 import { darkTheme } from 'theme/colors'
 
 import { SupportedChainId, SupportedL1ChainId, SupportedL2ChainId } from './chains'
-import { OPTIMISM_LIST, PICADILLY_LIST } from './lists'
+import { OPTIMISM_LIST, PICCADILLY_LIST } from './lists'
 
 export const AVERAGE_L1_BLOCK_TIME = ms`12s`
 
@@ -59,17 +59,17 @@ const CHAIN_INFO: ChainInfoMap = {
     color: darkTheme.chain_1,
     defaultListUrl: OPTIMISM_LIST,
   },
-  [SupportedChainId.PICADILLY]: {
+  [SupportedChainId.PICCADILLY]: {
     networkType: NetworkType.L1,
     blockWaitMsBeforeWarning: ms`10m`,
     bridge: 'https://test',
     docs: 'https://test',
     explorer: 'https://piccadilly.autonity.org/',
     infoLink: 'https://localhost',
-    label: 'Picadilly',
+    label: 'Piccadilly',
     logoUrl: ethereumLogoUrl,
     nativeCurrency: { name: 'Picadilly', symbol: 'ATN', decimals: 18 },
-    defaultListUrl: PICADILLY_LIST,
+    defaultListUrl: PICCADILLY_LIST,
   },
   [SupportedChainId.OPTIMISM]: {
     networkType: NetworkType.L2,

@@ -15,13 +15,13 @@ export const OPTIMISM_LIST =
   'https://raw.githubusercontent.com/project-paltypus/token-list/main/paltypus.tokenlist.json'
 // export const CELO_LIST = 'https://celo-org.github.io/celo-token-list/celo.tokenlist.json'
 
-export const PICADILLY_LIST =
+export const PICCADILLY_LIST =
   'https://raw.githubusercontent.com/project-paltypus/token-list/main/paltypus.tokenlist.json'
 
 export const UNSUPPORTED_LIST_URLS: string[] = []
 
 // default lists to be 'active' aka searched across
-export const DEFAULT_ACTIVE_LIST_URLS: string[] = [PICADILLY_LIST, UNI_LIST]
+export const DEFAULT_ACTIVE_LIST_URLS: string[] = [PICCADILLY_LIST, UNI_LIST]
 export const DEFAULT_INACTIVE_LIST_URLS: string[] = [
   // UNI_EXTENDED_LIST,
   // COMPOUND_LIST,
